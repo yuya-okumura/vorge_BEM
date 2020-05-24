@@ -85,6 +85,11 @@ header .header__menu-ber i {
   height: 100%;
 }
 
+.section .item-lg .item-lg__img img:hover {
+  background-color: #ee0000;
+  opacity: 0.5;
+}
+
 .section .item-lg .item-lg__text {
   width: 62.5%;
   margin: 10px 0px;
@@ -164,4 +169,22 @@ header .header__menu-ber i {
 .section .item-2x .item-2x__img .item-2x__img--text h2 {
   font-size: 31px;
   margin: 0px 0px 20px 0px;
+}
+
+.section .big-item {
+  width: 100vw;
+  display: block;
+}
+
+.section .big-item img {
+  width: 100%;
+}
+
+　 .big-item__text {
+  border-left: 1px solid black;
+  margin: 0px 10px;
+}
+
+footer {
+  background-color: #2D2E2F;
 }
