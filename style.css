@@ -1,8 +1,6 @@
 @charset "UTF-8";
 body {
   display: block;
-  width: 100vw;
-  height: 100vh;
   margin: 0;
   font-family: YakuHanJP, DomaineDisplay, "Yu Mincho", YuMincho, "Hiragino Minchō Pro", "Noto Serif CJK JP", serif;
   font-feature-settings: "palt";
@@ -13,8 +11,12 @@ header {
   position: relative;
   display: flex;
   border-top: 8px solid black;
-  width: 100wh;
   height: 66.9px;
+}
+
+header .header-log {
+  height: 37px;
+  width: 147px;
 }
 
 header .header__menu-ber {
@@ -31,14 +33,91 @@ header .header__menu-ber p {
   padding: 5px 15px;
 }
 
-header .header__menu-ber a {
+header .header__menu-ber label {
   padding: 5px 18px;
-  margin: 0;
+  margin: 15px 5px 10px 5px;
 }
 
-header .header__menu-ber i {
+header .header__menu-ber label i {
   color: black;
-  margin-top: 10px;
+}
+
+header input {
+  display: none;
+}
+
+header input:checked + #mega-menu {
+  display: block;
+}
+
+header #mega-menu {
+  display: none;
+  background-color: #2D2E2F;
+  margin: 0px;
+  width: 100vw;
+  height: auto;
+}
+
+header #mega-menu .close-menu {
+  position: fixed;
+  height: 50px;
+  width: 25px;
+  bottom: 10px;
+  top: 24px;
+  right: 24px;
+  cursor: pointer;
+  background: #ee0000;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ee0000;
+  border-image: initial;
+}
+
+header #mega-menu nav {
+  display: block;
+  margin: 50px 0 0 40px;
+}
+
+header #mega-menu nav a {
+  display: block;
+  margin: 5px 0;
+  padding: 0px;
+  font-size: 40px;
+  color: #f2f2f2;
+  text-decoration: none;
+}
+
+header #mega-menu ul {
+  display: block;
+  margin: 50px 0 0 20px;
+  padding: 0;
+}
+
+header #mega-menu ul p {
+  color: #f2f2f2;
+}
+
+header #mega-menu .mega-menu__a {
+  display: block;
+  margin: 10px 0 0 35px;
+  color: #f2f2f2;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+header .mega-menu__follow-container p {
+  margin: 0 20px;
+}
+
+header .mega-menu__follow-container .follow-container__icon-ber {
+  text-align: center;
+}
+
+header .mega-menu__follow-container .follow-container__icon-ber a svg {
+  border: 1px solid #f2f2f2;
+  border-radius: 50px 50px 50px 50px;
+  padding: 5px 15px;
 }
 
 .hide {
@@ -173,18 +252,57 @@ header .header__menu-ber i {
 
 .section .big-item {
   width: 100vw;
+  height: 80vh;
   display: block;
 }
 
 .section .big-item img {
   width: 100%;
+  height: 70%;
 }
 
 　 .big-item__text {
   border-left: 1px solid black;
-  margin: 0px 10px;
+  width: 90%;
+  margin: 0px 20px;
 }
 
 footer {
   background-color: #2D2E2F;
+}
+
+footer .footer__menu-ber {
+  display: flex;
+  height: 48px;
+}
+
+footer .footer__menu-ber p {
+  color: #9C9EA0;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  margin: 10px 10px 5px auto;
+}
+
+footer .footer__menu-ber a {
+  font-size: 14px;
+  margin-right: 0px;
+  color: #f2f2f2;
+  background-color: #ee0000;
+  letter-spacing: 0.1em;
+  width: 80px;
+  padding: 10px 15px 10px 25px;
+  text-decoration: none;
+}
+
+footer .logo-ber {
+  height: 260px;
+  background-color: #242526;
+}
+
+footer .logo-ber .logo-ber__img {
+  height: 280px;
+}
+
+footer .end-role {
+  text-align: center;
 }

@@ -1,7 +1,5 @@
 body
   display: block
-  width: 100vw
-  height: 100vh
   margin: 0
   font-family: YakuHanJP, DomaineDisplay, "Yu Mincho", YuMincho, "Hiragino Minchō Pro", "Noto Serif CJK JP", serif
   font-feature-settings: "palt"
@@ -11,8 +9,10 @@ header
   position: relative
   display: flex
   border-top: 8px solid black
-  width: 100wh
   height: 66.9px
+  .header-log
+    height: 37px
+    width: 147px
   .header__menu-ber
     position: absolute
     top: 5px
@@ -23,12 +23,70 @@ header
       font-size: 14px
       border-right: 1px solid rgb(202, 204, 206)
       padding: 5px 15px
-    a
+    label
       padding: 5px 18px
-      margin: 0
-    i
-      color: black
-      margin-top: 10px
+      margin: 15px 5px 10px 5px
+      i
+        color: black
+
+  input
+    display: none
+    &:checked+#mega-menu
+      display: block
+
+  #mega-menu
+    display: none
+    background-color: #2D2E2F
+    margin: 0px
+    width: 100vw
+    height: auto
+    .close-menu
+      position: fixed
+      height: 50px
+      width: 25px
+      bottom: 10px
+      top: 24px
+      right: 24px
+      cursor: pointer
+      background: rgb(238, 0, 0)
+      border-radius: 50%
+      border-width: 1px
+      border-style: solid
+      border-color: rgb(238, 0, 0)
+      border-image: initial
+    nav
+      display: block
+      margin: 50px 0 0 40px
+      a
+        display: block
+        margin: 5px 0
+        padding: 0px
+        font-size: 40px
+        color: #f2f2f2
+        text-decoration: none
+    ul
+      display: block
+      margin: 50px 0 0 20px
+      padding: 0
+      p
+        color: #f2f2f2
+    .mega-menu__a
+      display: block
+      margin: 10px 0 0 35px
+      color: #f2f2f2
+      font-size: 12px
+      text-decoration: none
+
+  .mega-menu__follow-container
+    p
+      margin: 0 20px
+    .follow-container__icon-ber
+      text-align: center
+      a
+        svg
+          border: 1px solid #f2f2f2
+          border-radius: 50px 50px 50px 50px
+          padding: 5px 15px
 .hide
   width: 100%
   min-height: 24px
@@ -122,11 +180,38 @@ header
           margin: 0px 0px 20px 0px
   .big-item
     width: 100vw
+    height: 80vh
     display: block
     img
       width: 100%
+      height: 70%
 　  .big-item__text
       border-left: 1px solid black
-      margin: 0px 10px
+      width: 90%
+      margin: 0px 20px
 footer
   background-color: #2D2E2F
+  .footer__menu-ber
+    display: flex
+    height: 48px
+    p
+      color: #9C9EA0
+      font-size: 14px
+      letter-spacing: 0.1em
+      margin: 10px 10px 5px auto
+    a
+      font-size: 14px
+      margin-right: 0px
+      color: #f2f2f2
+      background-color: rgb(238, 0, 0)
+      letter-spacing: 0.1em
+      width: 80px
+      padding: 10px 15px 10px 25px
+      text-decoration: none
+  .logo-ber
+    height: 260px
+    background-color: #242526
+    .logo-ber__img
+      height: 280px
+  .end-role
+    text-align: center
